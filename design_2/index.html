@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxCraft & Associates</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Popup -->
+    <div id="servicePopup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="popup-header">
+                <h2>Honored Selection</h2>
+                <div class="divider"></div>
+            </div>
+            <p>How may we assist you today?</p>
+            <div class="popup-grid">
+                <button onclick="prefillService('Form 10F')">Form 10F Compliance</button>
+                <button onclick="prefillService('PAN Card')">PAN Card Issuance</button>
+                <button onclick="prefillService('No PE Certificate')">No PE Certification</button>
+                <button onclick="prefillService('Income Tax')">Taxation Advisory</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="https://via.placeholder.com/50x50/B8860B/FFFFFF?text=TC" alt="Crest">
+                <span>TaxCraft & Associates</span>
+            </div>
+            <nav>
+                <a href="#services">Our Expertise</a>
+                <a href="#about">The Firm</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h4>Est. 2024</h4>
+            <h1>Preserving Wealth,<br>Ensuring Legacy.</h1>
+            <div class="divider"></div>
+            <p>Premier tax consultancy for the discerning enterprise.</p>
+            <a href="#contact" class="btn-gold">Consult With Us</a>
+        </div>
+    </section>
+
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Areas of Practice</h2>
+                <div class="divider-center"></div>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Form 10F</h3>
+                    <p>Rigorous filing for non-resident entities, with or without Permanent Account Number.</p>
+                </div>
+                <div class="service-card">
+                    <h3>PAN Issuance</h3>
+                    <p>Expedited processing of Permanent Account Numbers for individuals and corporations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>No PE Certificates</h3>
+                    <p>Certification services regarding Permanent Establishment status in India.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Income Tax</h3>
+                    <p>Comprehensive advisory on direct taxation matters and appellate mechanisms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container contact-box">
+            <div class="contact-left">
+                <h2>Request Counsel</h2>
+                <p>Allow us to guide you through the intricacies of the law.</p>
+                <div class="divider"></div>
+                <p>Unit 319, Trade Centre<br>Gurugram, India</p>
+                <p>+91-98765-43210</p>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <label>Full Name</label>
+                    <input type="text">
+                    <label>Inquiry Nature</label>
+                    <select id="service-select">
+                        <option value="">Select Service</option>
+                        <option value="Form 10F">Form 10F</option>
+                        <option value="PAN Card">PAN Card</option>
+                        <option value="No PE Certificate">No PE Certificate</option>
+                        <option value="Income Tax">Income Tax</option>
+                    </select>
+                    <button type="submit" class="btn-dark">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TaxCraft & Associates. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

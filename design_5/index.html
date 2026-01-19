@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAXCRAFT /// BOLD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="servicePopup" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">CLOSE [X]</span>
+            <h2>CHOOSE_PATH</h2>
+            <div class="popup-grid">
+                <div class="brutal-btn" onclick="prefillService('Form 10F')">FORM 10F</div>
+                <div class="brutal-btn" onclick="prefillService('PAN Card')">GET PAN</div>
+                <div class="brutal-btn" onclick="prefillService('No PE Certificate')">NO PE</div>
+                <div class="brutal-btn" onclick="prefillService('Income Tax')">TAX ADVICE</div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">TAXCRAFT</div>
+        <div class="menu">
+            <a href="#services">WORK</a>
+            <a href="#about">INFO</a>
+            <a href="#contact">MAIL</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>WE HANDLE<br>YOUR TAX.</h1>
+        <p>NO NONSENSE. PURE COMPLIANCE.</p>
+    </header>
+
+    <section id="services" class="marquee">
+        <div class="track">
+            <span>FORM 10F /// PAN CARD /// NO PE CERTIFICATE /// INCOME TAX /// </span>
+            <span>FORM 10F /// PAN CARD /// NO PE CERTIFICATE /// INCOME TAX /// </span>
+        </div>
+    </section>
+
+    <section class="services-list">
+        <div class="item">
+            <h2>01</h2>
+            <h3>FORM 10F</h3>
+            <p>FILING ASSISTANCE</p>
+        </div>
+        <div class="item">
+            <h2>02</h2>
+            <h3>PAN CARD</h3>
+            <p>OBTAIN ID</p>
+        </div>
+        <div class="item">
+            <h2>03</h2>
+            <h3>NO PE</h3>
+            <p>CERTIFICATION</p>
+        </div>
+        <div class="item">
+            <h2>04</h2>
+            <h3>TAX</h3>
+            <p>ADVISORY</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>CONTACT US</h2>
+        <form>
+            <input type="text" placeholder="NAME">
+            <input type="email" placeholder="EMAIL">
+            <select id="service-select">
+                <option value="">SERVICE NEEDED</option>
+                <option value="Form 10F">FORM 10F</option>
+                <option value="PAN Card">PAN CARD</option>
+                <option value="No PE Certificate">NO PE CERT</option>
+                <option value="Income Tax">INCOME TAX</option>
+            </select>
+            <button>SEND DATA</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
