@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Add shadow/color on scroll
         if (currentScroll > 50) {
-            header.style.background = "rgba(2, 6, 23, 0.95)";
+            header.style.background = "rgba(255, 255, 255, 0.95)";
             header.style.padding = "0"; // Shrink slightly
             header.style.boxShadow = "0 4px 20px rgba(0,0,0,0.1)";
         } else {
-            header.style.background = "rgba(2, 6, 23, 0.85)";
+            header.style.background = "rgba(255, 255, 255, 0.95)";
             header.style.padding = "10px 0"; // Original spacing
             header.style.boxShadow = "none";
         }

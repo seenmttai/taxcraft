@@ -8,9 +8,10 @@
     --accent-color: #dda15e;
     /* Muted Gold/Bronze */
     --accent-hover: #c78d4d;
-    --text-main: #1e293b;
-    /* Dark text for light theme */
-    --text-muted: #64748b;
+    --text-main: #0f172a;
+    /* Darker navy for main text */
+    --text-muted: #475569;
+    /* Darker gray for muted text */
     --white: #ffffff;
     --bg-dark: #f1f5f9;
     /* Light background now */
@@ -232,12 +233,16 @@ header {
 
 /* --- Hero Section --- */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     background: #d3d4d8;
     /* Solid color from uploaded image */
     position: relative;
+    padding-top: 220px;
+    padding-bottom: 120px;
     margin-top: 0;
 }
 
@@ -250,6 +255,14 @@ header {
     position: relative;
     z-index: 2;
     max-width: 800px;
+    text-align: center;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .hero h1 {
@@ -262,14 +275,16 @@ header {
 
 .hero p {
     font-size: 1.25rem;
-    margin-bottom: 2.5rem;
-    color: #475569;
+    margin: 0 auto 2.5rem auto;
+    color: #334155;
     max-width: 600px;
     font-weight: 400;
 }
 
 /* --- Quick Info Strip --- */
 .info-strip {
+    position: relative;
+    z-index: 5;
     background: var(--accent-color);
     color: var(--primary-color);
     padding: 15px 0;
@@ -294,7 +309,7 @@ header {
 
 .section-header h2 {
     font-size: 3rem;
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 .bg-light .section-header h2 {
@@ -345,7 +360,7 @@ header {
 }
 
 .service-card h3 {
-    color: var(--white);
+    color: var(--primary-color);
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
@@ -402,7 +417,7 @@ header {
 .parallax-content>p {
     margin-bottom: 60px;
     font-size: 1.2rem;
-    color: #475569;
+    color: #334155;
 }
 
 .process-grid {
@@ -458,7 +473,7 @@ header {
 }
 
 .about-text p {
-    color: #475569;
+    color: #334155;
 }
 
 .about-image-wrapper {
@@ -573,7 +588,7 @@ header {
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 0.9rem;
-    color: #475569;
+    color: #334155;
 }
 
 .form-group input,
@@ -602,7 +617,7 @@ header {
 .form-footer {
     margin-top: 15px;
     font-size: 0.8rem;
-    color: #94a3b8;
+    color: #475569;
     text-align: center;
 }
 
@@ -611,7 +626,7 @@ footer {
     background: var(--primary-color);
     padding: 80px 0 30px;
     border-top: 1px solid #1e293b;
-    color: #94a3b8;
+    color: #cbd5e1;
 }
 
 .footer-grid {
@@ -648,7 +663,7 @@ footer {
 }
 
 .footer-links a {
-    color: #94a3b8;
+    color: #cbd5e1;
 }
 
 .footer-links a:hover {
@@ -798,7 +813,7 @@ footer {
         .form-footer {
             margin-top: 15px;
             font-size: 0.8rem;
-            color: #94a3b8;
+            color: #475569;
             text-align: center;
         }
 
@@ -807,7 +822,7 @@ footer {
             background: #000;
             padding: 80px 0 30px;
             border-top: 1px solid #1e293b;
-            color: #94a3b8;
+            color: #cbd5e1;
         }
 
         .footer-grid {
@@ -844,7 +859,7 @@ footer {
         }
 
         .footer-links a {
-            color: #94a3b8;
+            color: #cbd5e1;
         }
 
         .footer-links a:hover {
@@ -882,7 +897,7 @@ footer {
             text-align: center;
             position: relative;
             border: 1px solid var(--glass-border);
-            color: var(--white);
+            color: var(--primary-color);
         }
 
         .close-btn {
@@ -910,7 +925,7 @@ footer {
             padding: 25px;
             border-radius: 6px;
             border: 1px solid var(--glass-border);
-            color: var(--white);
+            color: var(--primary-color);
             font-weight: 600;
             display: flex;
             flex-direction: column;
@@ -1014,8 +1029,7 @@ footer {
 
         .page-hero p {
             font-size: 1.2rem;
-            color: #475569;
-            max-width: 600px;
+            color: #334155;
             position: relative;
             z-index: 2;
         }
@@ -1051,7 +1065,7 @@ footer {
 
         .faq-answer {
             padding: 0 20px 20px;
-            color: #475569;
+            color: #334155;
             display: none;
             line-height: 1.6;
             border-top: 1px solid #f1f5f9;
