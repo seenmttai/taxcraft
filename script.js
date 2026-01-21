@@ -6,16 +6,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const serviceSelect = document.getElementById("service-select");
 
     // Auto-open popup after 1.5 seconds if not seen before
-    if (!sessionStorage.getItem('popupShown')) {
+    if (modal && !sessionStorage.getItem('popupShown')) {
         setTimeout(() => {
             modal.style.display = "block";
             sessionStorage.setItem('popupShown', 'true');
         }, 1500);
     }
 
-    // Close logic
-    closeBtn.onclick = () => modal.style.display = "none";
-    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; };
+    // Close logic (Null-safe)
+    if (closeBtn) closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (e) => {
+        if (modal && e.target == modal) modal.style.display = "none";
+    };
+
 
     // Prefill Service
     window.prefillService = function (serviceName) {
@@ -96,11 +99,22 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // --- 5. FAQ Toggle ---
-    document.querySelectorAll('.faq-question').forEach(item => {
-        item.addEventListener('click', event => {
-            const parent = item.parentNode;
-            parent.classList.toggle('active');
+    // --- 5. FAQ Toggle (Refined) ---
+    const faqContainer = document.querySelector('.faq-container');
+    if (faqContainer) {
+        faqContainer.addEventListener('click', (e) => {
+            const question = e.target.closest('.faq-question');
+            if (question) {
+                const item = question.closest('.faq-item');
+                if (item) {
+                    // Optional: Close other items when one is opened
+                    // document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    //     if (otherItem !== item) otherItem.classList.remove('active');
+                    // });
+                    item.classList.toggle('active');
+                }
+            }
         });
-    });
+    }
+
 });
