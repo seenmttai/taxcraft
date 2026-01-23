@@ -18,51 +18,65 @@
     <div id="servicePopup" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <h2>How can we help you today?</h2>
-            <p>Select a service to get started immediately.</p>
+            <div class="modal-header">
+                <h2>How can we help you today?</h2>
+                <p>Select a service to get started immediately.</p>
+            </div>
             <div class="popup-grid">
                 <a href="#contact" onclick="prefillService('Form 10F')" class="popup-option">
-                    <!-- File SVG -->
-                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                        <polyline points="10 9 9 9 8 9"></polyline>
-                    </svg>
-                    File Form 10F
+                    <div class="icon-wrapper">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <div class="popup-option-text">
+                        <span class="popup-option-title">File Form 10F</span>
+                        <span class="popup-option-subtitle">For non-residents & foreign entities</span>
+                    </div>
                 </a>
                 <a href="#contact" onclick="prefillService('PAN Card')" class="popup-option">
-                    <!-- ID Card SVG -->
-                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
-                        <circle cx="8.5" cy="10" r="2.5"></circle>
-                        <path d="M16.5 14h-2a2 2 0 0 0-2 2v.5"></path>
-                        <line x1="13.5" y1="9" x2="19.5" y2="9"></line>
-                        <line x1="13.5" y1="12" x2="17.5" y2="12"></line>
-                    </svg>
-                    Obtain PAN
+                    <div class="icon-wrapper">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="16" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="10" r="2.5"></circle>
+                            <path d="M16.5 14h-2a2 2 0 0 0-2 2v.5"></path>
+                            <line x1="13.5" y1="9" x2="19.5" y2="9"></line>
+                        </svg>
+                    </div>
+                    <div class="popup-option-text">
+                        <span class="popup-option-title">Obtain PAN</span>
+                        <span class="popup-option-subtitle">Permanent Account Number services</span>
+                    </div>
                 </a>
                 <a href="#contact" onclick="prefillService('No PE Certificate')" class="popup-option">
-                    <!-- Building SVG -->
-                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                        <circle cx="12" cy="14" r="3"></circle>
-                        <path d="M12 14l1.5 1.5"></path>
-                        <polyline points="14 2 14 8 20 8"></polyline>
-                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                    </svg>
-                    No PE Certificate
+                    <div class="icon-wrapper">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <circle cx="12" cy="14" r="3"></circle>
+                            <path d="M12 14l1.5 1.5"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                    </div>
+                    <div class="popup-option-text">
+                        <span class="popup-option-title">No PE Certificate</span>
+                        <span class="popup-option-subtitle">Permanent Establishment declarations</span>
+                    </div>
                 </a>
                 <a href="#contact" onclick="prefillService('Income Tax')" class="popup-option">
-                    <!-- Chart SVG -->
-                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="12" y1="20" x2="12" y2="10"></line>
-                        <line x1="18" y1="20" x2="18" y2="4"></line>
-                        <line x1="6" y1="20" x2="6" y2="16"></line>
-                    </svg>
-                    Income Tax
+                    <div class="icon-wrapper">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="20" x2="12" y2="10"></line>
+                            <line x1="18" y1="20" x2="18" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="16"></line>
+                        </svg>
+                    </div>
+                    <div class="popup-option-text">
+                        <span class="popup-option-title">Income Tax</span>
+                        <span class="popup-option-subtitle">ITR filing & advisory services</span>
+                    </div>
                 </a>
             </div>
         </div>
