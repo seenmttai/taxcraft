@@ -697,7 +697,7 @@ footer {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2000;
+    z-index: 20000;
     left: 0;
     top: 0;
     width: 100%;
@@ -802,10 +802,12 @@ footer {
 }
 
 .modal-content>p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.05rem;
+    color: #ffffff;
     margin-bottom: 0;
     font-weight: 400;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
 }
 
 .popup-grid {
