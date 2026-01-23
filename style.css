@@ -801,7 +801,7 @@ footer {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.modal-content>p {
+.modal-header p {
     font-size: 1.05rem;
     color: #ffffff;
     margin-bottom: 0;
