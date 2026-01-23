@@ -148,7 +148,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--primary-light);
+    /* Changed from white to primary-light */
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--glass-border);
     transition: 0.3s;
@@ -168,6 +169,16 @@ header {
     font-weight: 700;
     color: var(--primary-color);
     letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text-addon {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-muted);
 }
 
 .logo span {
@@ -624,7 +635,8 @@ header {
 /* --- Footer --- */
 footer {
     background: var(--primary-color);
-    padding: 80px 0 30px;
+    padding: 80px 0 100px;
+    /* added Padding at bottom for sticky footer */
     border-top: 1px solid #1e293b;
     color: #cbd5e1;
 }
@@ -678,7 +690,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- Modal --- */
+/* --- Modal (Enhanced Redesign) --- */
 .modal {
     display: none;
     position: fixed;
@@ -687,65 +699,168 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
+    background-color: rgba(12, 18, 34, 0.6);
+    /* Use primary color with opacity */
+    backdrop-filter: blur(16px);
+    transition: all 0.3s ease;
 }
 
 .modal-content {
-    background-color: var(--primary-light);
+    background: #ffffff;
     margin: 5% auto;
-    padding: 50px;
-    border-radius: 8px;
+    padding: 60px;
+    border-radius: 20px;
+    /* Softer corners */
     width: 90%;
-    max-width: 700px;
+    max-width: 800px;
     text-align: center;
     position: relative;
-    border: 1px solid var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     color: var(--primary-color);
+    animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 .close-btn {
     position: absolute;
-    right: 25px;
-    top: 20px;
-    font-size: 30px;
+    right: 30px;
+    top: 30px;
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #f1f5f9;
+    border-radius: 50%;
     cursor: pointer;
     color: var(--text-muted);
+    transition: all 0.2s;
 }
 
 .close-btn:hover {
-    color: var(--accent-color);
+    color: var(--white);
+    background: var(--accent-color);
+    transform: rotate(90deg);
+}
+
+.modal-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
 }
 
 .popup-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
     margin-top: 30px;
 }
 
 .popup-option {
-    background: rgba(0, 0, 0, 0.03);
-    padding: 25px;
-    border-radius: 6px;
-    border: 1px solid var(--glass-border);
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
     color: var(--primary-color);
     font-weight: 600;
+    font-size: 1.1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    /* Horizontal alignment */
     align-items: center;
-    gap: 15px;
+    gap: 20px;
+    transition: all 0.3s ease;
+    text-align: left;
+    cursor: pointer;
 }
 
 .popup-option:hover {
-    background: var(--accent-color);
-    color: var(--primary-color);
-    border-color: var(--accent-color);
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.popup-option:hover .icon-sm {
+    color: var(--accent-color);
 }
 
 .icon-sm {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    /* Larger icons */
+    height: 40px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+}
+
+/* --- Sticky Footer --- */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    display: flex;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-sans);
+}
+
+.sticky-btn {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: filter 0.2s;
+}
+
+.sticky-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.sticky-btn:hover {
+    filter: brightness(110%);
+}
+
+.footer-call {
+    background-color: #ff6b00;
+    /* Orange */
+}
+
+.footer-email {
+    background-color: #3498db;
+    /* Blue */
+}
+
+.footer-whatsapp {
+    background-color: #4caf50;
+    /* Green */
 }
 
 /* --- Animations --- */
@@ -794,6 +909,13 @@ footer {
 
     .mobile-menu-icon {
         display: block;
+    }
+
+    .sticky-btn span {
+        /* Hide text on very small screens if needed, 
+            but user design looks like text is important. 
+            Can decrease font size. */
+        font-size: 0.9rem;
     }
 }
 
